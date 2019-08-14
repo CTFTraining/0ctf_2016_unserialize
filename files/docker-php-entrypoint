@@ -1,5 +1,10 @@
 #!/bin/sh
 
+sed -i "s/flag{0ctf_2016_unserialize_is_very_good!}/$FLAG/" /var/www/html/config.php
+
+export FLAG=not_flag
+FLAG=not_flag
+
 php-fpm &
 
 nginx &

@@ -4,7 +4,10 @@ version: "2"
 services:
 
   web:
+    build: .
     image: ctftraining/0ctf_2016_unserialize
+    environment:
+      - FLAG=flag{test_flag}
     restart: always
     ports:
       - "127.0.0.1:8302:80"
